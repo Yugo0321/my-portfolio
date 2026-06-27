@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yugo's Portfolio</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="signature">
+      <h1><a href="#">YUGO'S<br>PORTFOLIO</a></h1>
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <img src="img/main-pic1.jpg" alt="メインビジュアル">
+    <nav>
+      <ul class="hamburger_navi">
+        <li class="hamburger-menu-section"><a href="#work">Works</a></li>
+        <li class="hamburger-menu-section"><a href="#skill">Skill</a></li>
+        <li class="hamburger-menu-section"><a href="#about">About</a></li>
+        <li class="hamburger-menu-section"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!-- 制作物 -->
+  <section id="work">
+    <h1>Works</h1>
+    <h4>制作物</h4>
+    <div class="Works">
+      <div class="work-up">
+        <div class="fadein">
+          <div class="work-card"><a href="https://yugo0321.github.io/my-second-repo/" target="_blank">
+              <img src="img/mok-bicycle.png" alt="自転車ホームページ">
+              <p>WEBサイト模写（学習用）<br>HTML / CSS</p>
+            </a>
+          </div>
+        </div>
+        <div class="fadein">
+          <div class="work-card"><a href="https://yugo0321.github.io/kadai3-1/" target="_blank">
+              <img src="img/mok-mag88.png" alt="カフェホームページ">
+              <p>WEBサイト模写（学習用）<br>HTML / CSS</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="work-down">
+        <div class="fadein">
+          <div class="work-card"><a href="https://yugo0321.github.io/kadai4-4/" target="_blank">
+              <img src="img/mok-sneker.png" alt="スニーカーホームページ">
+              <p>WEBサイト模写（学習用）<br>HTML / CSS / Javascript</p>
+            </a>
+          </div>
+        </div>
+        <div class="fadein">
+          <div class="work-card"><a href="https://yugo0321.github.io/kadai4-5/" target="_blank">
+              <img src="img/mok-flowerpng.png" alt="フラワーホームページ">
+              <p>WEBサイト模写（学習用）<br>HTML / CSS / Javascript</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- スキル -->
+  <section id="skill">
+    <h1>Skill</h1>
+    <h4>できること</h4>
+    <div class="skill-container">
+      <div class="html-area">
+        <img src="img/icons8-html-100.png" alt="HTMLロゴ">
+        <h4>HTML</h4>
+        <p>Webサイトの構造を作成します。
+          見出しや文章、画像などを適切に配置し、分かりやすいページを構築します。</p>
+      </div>
+      <div class="css-area">
+        <img src="img/icons8-css-100.png" alt="CSSロゴ">
+        <h4>CSS</h4>
+        <p>レイアウトや配色、アニメーションを設定し、
+          見やすく魅力的なデザインを実現します。</p>
+      </div>
+      <div class="java-area">
+        <img src="img/icons8-javascript-100.png" alt="javascriptロゴ">
+        <h4>Jacascript</h4>
+        <p>動きのあるUIやインタラクションを実装します。
+          現在も学習を続けながら技術を向上させています。</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- 自己紹介 -->
+  <section id="about">
+    <h1>About Me</h1>
+    <h4>私について</h4>
+    <div class="about-me">
+      <!-- <img src="" alt=""> -->
+      <div class="about-detail">
+        <p>名前：浅木 優吾 ／ Asaki Yugo</p>
+        <p>出身：北海道</p>
+        <p>趣味：旅行、スポーツ</p>
+        <br>
+        <p>HTML,CSS,Javascriptを使用したコーディングが可能です。<br>
+          コミュニケーションを重視し、ご要望や課題を正確に把握したうえで制作を進めていきます。<br>
+          安心してお任せいただけるよう、誠実な対応と細やかな確認を心掛け、責任感を持って最後まで丁寧に取り組みますので、
+          どうぞよろしくお願いいたします。</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- トップボタン -->
+  <button class="page-top"><img src="img/toppage.png" alt="トップページ"></button>
+
+
+
+  <!-- お問い合わせ -->
+  <footer class="footer">
+    <section id="contact">
+      <h1>Contact</h1>
+      <h4>お問い合わせ</h4>
+      <form action="https://formspree.io/f/xqeowbvw" method="post">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+        <label for="mail">Mail</label>
+        <input id="mail" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button class="send_btn" type="submit">
+          SEND MESSAGE
+        </button>
+      </form>
+      <p>@2026 My Portfolio </p>
+      </div>
+    </section>
+  </footer>
+
+  <div class="overlay"></div>
+  <script src="/script.js" defer></script>
+</body>
+
+</html>

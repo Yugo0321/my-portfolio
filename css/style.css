@@ -1,0 +1,421 @@
+@charset "utf-8";
+body{
+font-family: 'Montserrat', sans-serif;
+background:#F5F1EA;
+}
+header{
+  position: relative;
+}
+.signature{
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+.signature h1{
+  color: white;
+  font-size: clamp(4rem, 14vw, 13rem);
+  line-height: 0.9;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+header img{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ハンバーガー */
+.hamburger{
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  z-index: 30;
+
+  position: fixed;
+  top: 10px;
+  right: 1px;
+  opacity: 1;
+}
+
+.hamburger.active{
+  position: fixed;
+  top: 10px;
+  right: 1px;
+}
+
+.hamburger span {
+  width: 40%;
+  height: 4px;
+  background: white;
+  transition: 0.9s;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+
+  position: absolute;
+  right: 5px;
+  transform: translateX(-50%);
+}
+
+.hamburger span:nth-child(1) {
+  top: 30px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 45px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 60px;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 45px;
+  transform: translateX(-50%) rotate(-405deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 45px;
+  transform: translateX(-50%) rotate(405deg);
+}
+
+.hamburger_navi li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  width: 300px;
+  height: 80px;
+  border-bottom: #fff 2px solid;
+  font-size: 20px;
+  transition: .3s;
+}
+.hamburger_navi li:nth-child(1){
+  border-top: #fff 2px solid;
+}
+/* .hamburger_navi li:hover{
+  opacity: .5;
+  background-color: #FF7F02;
+} */
+
+.hamburger_navi li:hover{
+  border-left: 6px solid #FF7F02;
+  padding-left: 20px;
+}
+
+.hamburger_navi {
+  width: min(400px, 50%);
+  height: 100vh;
+  background-color: #1F1F1F;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translate(-100%);
+  transition: 0.6s;
+  /* visibility: hidden; */
+  padding: 50px 50px 0 20px;
+}
+
+.hamburger_navi.active {
+  opacity: 1;
+  /* visibility: visible; */
+  transform: translate(0);
+  z-index: 30;
+}
+
+.hamburger.active span {
+  background-color: white;
+  /* z-index: 20; */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.5s;
+
+  z-index: 15;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* ハンバーガーここまで */
+
+
+section h1,
+section h4{
+  text-align: center;
+  color: #FF7F02;
+}
+section h1{
+  margin-top: 150px;
+}
+
+
+
+/* 制作物 */
+.work-up,
+.work-down{
+  display: flex;
+  justify-content: center;
+  margin: 50px 13% 0;
+  gap: 80px;
+}
+.work-up{
+  margin-bottom: 150px;
+}
+.work-up img,
+.work-down img{
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+.work-up div p,
+.work-down div p{
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.work-card{
+  background-color: white;
+  border-radius:40px;
+  padding: 3% 0;
+  transition: .3s;
+}
+/* ホバー時の以下レパートリー */
+/* .work-card:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.15);
+} */
+/* .work-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+} */
+ /* .work-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255,127,2,.18);
+} */
+.work-card:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 24px 48px rgba(0,0,0,.12);
+}
+
+.fadein{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.5s;
+}
+.fadein.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* スキル */
+.skill-container{
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 50px 13% 0;
+}
+.skill-container img{
+  display: block;
+  height: 150px;
+  margin: 0 auto;
+}
+.html-area,
+.css-area,
+.java-area{
+  height: 300px;
+  max-width: 300px;
+  flex: 1;
+  /* border: #FF7F02 3px solid; */
+}
+.skill-container div h4,
+.skill-container div p{
+  color: #121212;
+  margin-top: 20px;
+}
+
+
+
+/* 私について */
+.about-me{
+  /* display: flex;
+  align-items: center; */
+  /* gap: 50px; */
+
+  margin: 50px 25% 0;
+}
+/* .about-me img{
+  display: block;
+  height: 300px;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 100px;
+  margin-left: 20vw;
+  background-color: #FF7F02;
+} */
+.about-detail{
+  /* flex: 1;
+  margin-right: 10%;
+  min-width: 0; */
+  /* margin: 0 13%; */
+}
+
+
+
+/* お問い合わせ */
+footer{
+  background: #1F1F1F;
+  margin-top: 100px;
+  padding: 1px 0 5px 0 ;
+}
+footer section{
+  width: min(70vw,800px);
+  margin: 0 auto;
+}
+form{
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+form label{
+  color: #fff;
+  margin-bottom: 8px;
+  /* font-size: 0.9rem; */
+  /* letter-spacing: .05em; */
+}
+
+form input,
+form textarea{
+  width: 100%;
+  padding: 16px 20px;
+  background: #2B2B2B;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  transition: .3s;
+}
+
+form textarea{
+  min-height: 180px;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus{
+  outline: none;
+  border-color: #FF7F02;
+  box-shadow: 0 0 15px rgba(255,127,2,.2);
+}
+
+.send_btn{
+  /* width: fit-content; */
+  padding: 16px 48px;
+  margin-top: 15px;
+  background: #FF7F02;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: .3s;
+  align-self: center;
+}
+
+.send_btn:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(255,127,2,.5);
+}
+
+#contact p{
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+  margin-top: 150px;
+}
+
+
+/* トップ戻るボタン */
+.page-top{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  position: fixed;
+  right: 40px;
+  bottom: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.page-top img{
+  height: 20px;
+  width: 30px;
+}
+
+.page-top.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.page-top:hover{
+  opacity: .6;
+}
+
+
+@media(max-width: 768px){
+  .skill-container,
+  .about-me,
+  .work-up,
+  .work-down{
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me img{
+    margin: 0 auto;
+  }
+  .about-detail{
+    margin-left: 10%;
+  }
+  .page-top{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    position: fixed;
+    right: 25px;
+    bottom: 120px;
+  }
+}

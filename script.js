@@ -21,39 +21,6 @@ hamburgerMenuSections.forEach((hamburgerMenuSection) => {
     })});
 
 
-
-
-// フェードイン
-// ふわっと表示させたい要素を取得
-const fadeElements = document.querySelectorAll(".fadein");
-
-// IntersectionObserverを作成
-const observer = new IntersectionObserver(function(entries){
-
-  entries.forEach(function(entry){
-
-    // 要素が画面内に入ったら
-    if(entry.isIntersecting){
-
-      // showクラスを追加
-      entry.target.classList.add("show");
-
-    }
-
-  });
-
-});
-
-// 各要素を監視
-fadeElements.forEach(function(element){
-
-  observer.observe(element);
-
-});
-
-
-
-
 // トップボタン
 const pageTopBtn = document.querySelector('.page-top');
 const footer = document.querySelector('.footer');
@@ -93,7 +60,7 @@ const footerObserver = new IntersectionObserver(function (entries) {
     };
   });
 }, {
-  rootMargin: "0px 0px -200px 0px"
+  rootMargin: "0px 0px -300px 0px"
 });
 
 footerObserver.observe(footer);

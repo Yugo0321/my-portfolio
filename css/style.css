@@ -271,7 +271,7 @@ section h1{
   align-items: center; */
   /* gap: 50px; */
 
-  margin: 50px 25% 0;
+  margin: 50px 20% 0;
 }
 /* .about-me img{
   display: block;
@@ -428,6 +428,12 @@ form textarea:focus{
   .hamburger_navi {
     width: 30%;;
     height: 100vh;
-    
     }
+  .hamburger_navi li{
+    border-bottom: #fff 2px solid ; 
+    width: 100%; 
+}
+  .hamburger_navi li:nth-child(1){
+     border-top: #fff 2px solid;
+}
 }
